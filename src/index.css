@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ConceptSummarizer Design System - Notion/Miro Inspired */
+/* Deep teal/cyan palette with warm amber accents */
+
+@layer base {
+  :root {
+    /* Core palette - Deep Teal/Cyan */
+    --background: 180 20% 99%;
+    --foreground: 180 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 30% 10%;
+
+    /* Primary - Deep Teal */
+    --primary: 180 60% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft Teal */
+    --secondary: 180 30% 95%;
+    --secondary-foreground: 180 60% 25%;
+
+    /* Muted - Light gray with teal undertone */
+    --muted: 180 15% 95%;
+    --muted-foreground: 180 15% 45%;
+
+    /* Accent - Warm Amber */
+    --accent: 38 92% 50%;
+    --accent-foreground: 38 90% 15%;
+
+    /* Success - Fresh Green */
+    --success: 160 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Warm Orange */
+    --warning: 30 90% 55%;
+    --warning-foreground: 30 90% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 20% 90%;
+    --input: 180 20% 90%;
+    --ring: 180 60% 30%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(180 60% 30%) 0%, hsl(190 50% 40%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(45 95% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(180 20% 98%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(180 60% 95%) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(38 92% 95%) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(180 40% 93%) 0px, transparent 50%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(180 30% 10% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(180 30% 10% / 0.07), 0 2px 4px -2px hsl(180 30% 10% / 0.07);
+    --shadow-lg: 0 10px 15px -3px hsl(180 30% 10% / 0.08), 0 4px 6px -4px hsl(180 30% 10% / 0.08);
+    --shadow-glow: 0 0 20px hsl(180 60% 30% / 0.15);
+
+    --sidebar-background: 180 20% 98%;
+    --sidebar-foreground: 180 30% 10%;
+    --sidebar-primary: 180 60% 30%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 30% 95%;
+    --sidebar-accent-foreground: 180 60% 25%;
+    --sidebar-border: 180 20% 90%;
+    --sidebar-ring: 180 60% 30%;
+  }
+
+  .dark {
+    --background: 180 30% 7%;
+    --foreground: 180 15% 95%;
+
+    --card: 180 25% 10%;
+    --card-foreground: 180 15% 95%;
+
+    --popover: 180 25% 10%;
+    --popover-foreground: 180 15% 95%;
+
+    --primary: 180 50% 50%;
+    --primary-foreground: 180 30% 7%;
+
+    --secondary: 180 20% 15%;
+    --secondary-foreground: 180 15% 90%;
+
+    --muted: 180 20% 15%;
+    --muted-foreground: 180 15% 60%;
+
+    --accent: 38 85% 55%;
+    --accent-foreground: 38 90% 10%;
+
+    --success: 160 55% 45%;
+    --success-foreground: 160 60% 10%;
+
+    --warning: 30 85% 50%;
+    --warning-foreground: 30 90% 10%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 20% 18%;
+    --input: 180 20% 18%;
+    --ring: 180 50% 50%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(180 50% 40%) 0%, hsl(190 45% 50%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 85% 55%) 0%, hsl(45 90% 60%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(180 25% 12%) 0%, hsl(180 25% 10%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(180 50% 15%) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(38 70% 15%) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(180 40% 12%) 0px, transparent 50%);
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 20px hsl(180 50% 50% / 0.2);
+
+    --sidebar-background: 180 30% 8%;
+    --sidebar-foreground: 180 15% 95%;
+    --sidebar-primary: 180 50% 50%;
+    --sidebar-primary-foreground: 180 30% 7%;
+    --sidebar-accent: 180 20% 15%;
+    --sidebar-accent-foreground: 180 15% 90%;
+    --sidebar-border: 180 20% 18%;
+    --sidebar-ring: 180 50% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/80 backdrop-blur-md;
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-primary);
+  }
+}
